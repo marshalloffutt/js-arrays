@@ -30,3 +30,23 @@ const palChecker = (word) => {
 palChecker('mom'); //yes
 palChecker('racecar'); //yes
 palChecker('marshall'); //no
+
+let animals = ['snakes', 'moles', 'bats', 'wasps'];
+
+const lastItem = animals.pop(); // wasps
+const firstItem = animals.shift(); // snakes
+animals.push('scorpions');
+animals.unshift('baby hippo');
+
+console.log('animals', animals); // baby hippo, moles, bats, scorpions
+
+
+// For Loops
+// 1. What is your starting value - Usually 0
+// 2. What is your stopping value - something.length
+// 3. How are you incrementing? - Incrmenting by +1
+
+for(let i = 0; i < animals.length; i++){
+    //do something here
+    console.log(animals[i]);
+}
