@@ -103,6 +103,8 @@ const statementsStringBuilder = () => {
       printToDom(newString, 'statements');
   };
 
+  // Events
+
 // Call the Functions (Challenge 1)
   congressionalDistrictStringBuilder();
   voterRegistrationStringBuilder();
