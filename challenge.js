@@ -79,38 +79,53 @@ const congressionalDistrictStringBuilder = () => {
   printToDom(newString, 'congressionalDistrict');
 };
 
+// Statements
+const statementsStringBuilder = () => {
+  let newString = '';
+  for(let i=0; i<elizabethSanger.statements.length; i++){
+    newString += `<div class="statements">`;
+    newString +=  `<h3>${elizabethSanger.statements[i].statement}</h3>`;
+    newString +=  `<h6>${elizabethSanger.statements[i].category}</h6>`;
+    newString += `</div>`;
+    }
+      printToDom(newString, 'statements');
+};
+
+
+// Donation Form
+const donationFormStringBuilder = () => {
+  const newString = `<a href="https://${elizabethSanger.donationFormUrl}"> Click Here to Give Me Your Money </a>`;
+  printToDom(newString, 'donationForm');
+};
+
+// Events
+const eventsStringBuilder = () => {
+  let newString = '';
+  for (let i=0; i<elizabethSanger.events.length; i++){
+    newString += `<div class="events">`;
+    newString +=  `<h3>${elizabethSanger.events[i].date}</h3>`;
+    newString +=  `<h6>${elizabethSanger.events[i].title}</h6>`;
+    newString +=  `<h6>${elizabethSanger.events[i].description}</h6>`;
+    newString += `</div>`;
+  }
+    printToDom(newString, 'events');
+};
+
 // Voter Registration Form
 const voterRegistrationStringBuilder = () => {
   const newString = `<a href="https://${elizabethSanger.voterRegistrationUrl}"> Register to Vote Here </a>`;
   printToDom(newString, 'voterRegistration');
 };
 
-// Voter Donation Form
-const donationFormStringBuilder = () => {
-  const newString = `<a href="https://${elizabethSanger.donationFormUrl}"> Click Here to Give Me Your Money </a>`;
-  printToDom(newString, 'donationForm');
-};
 
-// Statements
-const statementsStringBuilder = () => {
-  let newString = '';
-  for(let i=0; i<elizabethSanger.statements.length; i++){
-    newString += `<div class="statement">`;
-    newString +=  `<h3>${elizabethSanger.statements[i].statement}</h3>`;
-    newString +=  `<h6>${elizabethSanger.statements[i].category}</h6>`;
-    newString += `</div>`;
-    }
-      printToDom(newString, 'statements');
-  };
-
-  // Events
 
 // Call the Functions (Challenge 1)
-  congressionalDistrictStringBuilder();
-  voterRegistrationStringBuilder();
-  donationFormStringBuilder();
-  statementsStringBuilder();
-  
+congressionalDistrictStringBuilder();
+statementsStringBuilder();
+donationFormStringBuilder();
+eventsStringBuilder();
+voterRegistrationStringBuilder();
+
   
 // Challenge 2
 const updateVoterRegistration = (newUrl => {
