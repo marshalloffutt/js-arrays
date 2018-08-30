@@ -73,14 +73,11 @@ let elizabethSanger = {
     selectedDiv.innerHTML = stringToPrint;
   };
 
-
   // Voter Regisgration Form
   const voterRegistrationStringBuilder = () => {
     const newString = `<a href="https://${elizabethSanger.voterRegistrationUrl}"> Register to Vote Here </a>`;
     printToDom(newString, 'voterRegistration');
   };
-
-  voterRegistrationStringBuilder();
 
   // Voter Donation Form
   const donationFormStringBuilder = () => {
@@ -88,14 +85,27 @@ let elizabethSanger = {
       printToDom(newString, 'donationForm');
   };
 
+  // Statements
+  const statementsStringBuilder = () => {
+      let newString = '';
+      for (let i=0; i<elizabethSanger.statements.length; i++){
+          newString += `<div class="statement">`;
+          newString +=  `<h3>${elizabethSanger.statements[i].statement}</h3>`;
+          newString +=  `<h6>${elizabethSanger.statements[i].category}</h6>`;
+          newString += `</div>`;
+      }
+
+      printToDom(newString, 'statements');
+  };
+
+// Calling the functions
+  voterRegistrationStringBuilder();
   donationFormStringBuilder();
+  statementsStringBuilder();
   
   
-  // Next One
-  const stateme
 
 
 //   const updateVoterRegistration = () => {
 // //do some stuff
 //     voterRegistrationStringBuilder();
-//   };
