@@ -176,10 +176,63 @@ imagesStringBuilder();
 missionStatementStringBuilder();
 voterRegistrationStringBuilder();
 
+
 // Challenge 2
+
+// Update Congressional District -- change 5 to 15
+const updateCongressionalDistrict = (newDistrict => {
+    elizabethSanger.congressionalDistrict = newDistrict;
+    congressionalDistrictStringBuilder();
+});
+
+// Update Statements -- Push a new statement + category 
+const updateStatements = (newStatement, newCategory) => {
+    let statementStuff = {
+        statement: newStatement,
+        category: newCategory
+    }
+    elizabethSanger.statements.push(statementStuff);
+    statementsStringBuilder();
+};
+
+// Update Donation Form URL
+const updateDonationForm = (newUrl => {
+    elizabethSanger.donationFormUrl = newUrl;
+    donationFormStringBuilder();
+});
+
+// Update Events -- push new event for 2019
+
+// Update Volunteers -- push new volunteer
+
+// Update Biography - change the text
+const updateBiography = (newBio => {
+    elizabethSanger.biography = newBio;
+    biographyStringBuilder();
+});
+
+// Update Images -- push a new image of a cat.
+
+// Update Mission Statement - change the text
+const updateMissionStatement = (newMission => {
+    elizabethSanger.missionStatement = newMission;
+    missionStatementStringBuilder();
+});
+
+// Update Voter Registration URL
 const updateVoterRegistration = (newUrl => {
     elizabethSanger.voterRegistrationUrl = newUrl;
     voterRegistrationStringBuilder();
-})
+});
 
+// Calling the Upate Functions
+
+updateCongressionalDistrict(15);
+updateStatements('free vet visits', 'healthcare');
+updateDonationForm('yahoo.com');
+// updateEvents();
+// updateVolunteers();
+updateBiography('She is probably the best');
+//updateImages();
+updateMissionStatement('Do great stuff');
 updateVoterRegistration('classtracker.zoeams.com');
