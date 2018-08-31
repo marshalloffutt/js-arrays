@@ -202,8 +202,28 @@ const updateDonationForm = (newUrl => {
 });
 
 // Update Events -- push new event for 2019
+const updateEvents = (newDate, newTitle, newDescription) => {
+    let eventInfo = {
+        date: newDate,
+        title: newTitle,
+        description: newDescription
+    }
+    elizabethSanger.events.push(eventInfo);
+    eventsStringBuilder();
+};
 
 // Update Volunteers -- push new volunteer
+const updateVolunteers = (newName, newAddress, newEmail, newPhone, newAvail, newActivities) => {
+    let volunteerInfo = {
+        name: newName,
+        address: newAddress,
+        phone: newPhone,
+        availability: newAvail,
+        activities: newActivities
+    }
+    elizabethSanger.volunteers.push(volunteerInfo);
+    volunteersStringBuilder();
+};
 
 // Update Biography - change the text
 const updateBiography = (newBio => {
@@ -212,6 +232,15 @@ const updateBiography = (newBio => {
 });
 
 // Update Images -- push a new image of a cat.
+const updateImages = (newImageUrl, newDescription, newType) => {
+    let imageInfo = {
+        imageUrl: newImageUrl,
+        description: newDescription,
+        type: newType
+    }
+    elizabethSanger.images.push(imageInfo);
+    imagesStringBuilder();
+};
 
 // Update Mission Statement - change the text
 const updateMissionStatement = (newMission => {
@@ -230,9 +259,9 @@ const updateVoterRegistration = (newUrl => {
 updateCongressionalDistrict(15);
 updateStatements('free vet visits', 'healthcare');
 updateDonationForm('yahoo.com');
-// updateEvents();
-// updateVolunteers();
+updateEvents('04/21/2019', 'Disc golf tournament', 'Toss some discs');
+updateVolunteers('Jenny', '2120 S Michigan Avenue', 'jenny@yahoo.com', '8675309', 'most days', 'events');
 updateBiography('She is probably the best');
-//updateImages();
+updateImages('https://c1.staticflickr.com/8/7295/9776257606_15b08c4a19.jpg', '2cool4school', 'headshot');
 updateMissionStatement('Do great stuff');
 updateVoterRegistration('classtracker.zoeams.com');
