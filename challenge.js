@@ -217,6 +217,7 @@ const updateVolunteers = (newName, newAddress, newEmail, newPhone, newAvail, new
     let volunteerInfo = {
         name: newName,
         address: newAddress,
+        email: newEmail,
         phone: newPhone,
         availability: newAvail,
         activities: newActivities
