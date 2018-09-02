@@ -1,3 +1,77 @@
 body {
-    background-color: silver;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.lizzy {
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+    font-weight: boldest;
+    font-family: fantasy;
+    font-size: 700%;
+    color: darkorchid;
+}
+
+#congressionalDistrict {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#donationForm {
+    font-size: 400%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#statements {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+#events {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#volunteers {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#biography {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#images {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#missionStatement {
+    text-align: center;
+}
+
+#voterRegistration {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 200%;
+}
+
+h6 {
+    text-align: center;
+    font-size: 120%;
 }
